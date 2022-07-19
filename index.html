@@ -14,20 +14,14 @@
 </head>
 
 <body>
-    
 
-
-    <?phph @package;
-    ?>
-
-    <?phph @var bool;
-    ?>
-
-    <?phph define( 'WP_USE_THEMES', true );
+    <?php
+    @package WordPress;
+    @var bool;
+    define( 'WP_USE_THEMES', true );
+    require __DIR__ . '/wp-blog-header.php';
     ?>
     
-    <?phph require __DIR__ . '/wp-blog-header.php';
-    ?>
 
 <script src="scripts/script.js"></script>
 </body>
