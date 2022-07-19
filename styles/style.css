@@ -146,1229 +146,567 @@ table {
 
 /* Einde css reset */
 
-html {
-  font-size: 14px;
-}
-
-/* achtergrond kleur, font*/
-body {
-  background: #fafafa;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1em;
-  margin: 0;
-  color: #262626;
-}
-/* dit is nodig om de background van de header verder te laten doorlopen als het scherm groter wordt */
-body>div {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  background: #ffffff;
-  border-bottom: 0.05em solid rgba(var(--b6a, 219, 219, 219), 1);
-}
-
-/* styling van de header */
-body>div>header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 3.94em;
-  max-height: 3.94em;
-  max-width: 64.38em;
-  margin: auto;
-  background: #ffffff;
-  margin-bottom: 0.1em;
-  padding: 0em 1.42857em;
-}
-
-/* styling van de titel van de pagina */
-body>div>header>h1 {
-  display: inline;
-  font-size: 2em;
-  font-weight: bold;
-  margin: 0;
-  margin-top: .3em;
-}
-
-body>div>header>h1>a {
-  display: flex;
-  line-height: 0;
-  font-size: 0;
-  color: transparent;
-}
-
-/* De zoekbalk die op kleine schermen niet wordt weergegeven */
-body>div>header>input {
-  display: none;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 1em;
-  text-decoration: none;
-  color: #8e8e8e;
-  align-items: center;
-  height: 2em;
-  width: 15.357em;
-  padding-left: 5.714em;
-  box-sizing: border-box;
-  background: url("../images/zoek.png");
-  background-size: 0.714em;
-  background-repeat: no-repeat;
-  background-color: #fafafa;
-  background-position: 4.429em 50%;
-  border: solid 1px #dbdbdb;
-  border-radius: 0.214em;
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
-/* zorgt ervoor dat de ingetype tekst niet onderstreept is */
-::placeholder {
-  text-decoration: none;
-}
-
-/* wanneer je input gaat geven verplaatst het zoekicoon */
-body>div>header input:focus {
-  padding-left: 16px;
-  background-position: 0;
-}
-
-body>div>header>nav {
-  margin: 0em;
-}
-
-body>div>header>nav>ul {
-  list-style: none;
-  align-items: center;
-  padding: 0em;
-}
-
-body>div>header>nav>ul>li {
-  display: inline-block;
-  padding-left: 1.3em;
-}
-
-body>div>header>nav>ul>li>a {
-  line-height: 0;
-  font-size: 0;
-  color: transparent;
-}
-
-body>div>header>nav>ul>li:first-of-type {
-  padding-left: 0em;
-}
-
-/* hele kleine inner shadow */
-body>div>header>nav>ul>li:nth-of-type(5) img {
-  box-shadow: inset 0 0 0 .1px #000000;
-  border-radius: 50%;
-}
-
-/* zorgt ervoor dat de body niet groter wordt dan 42.86em */
-body .homepage {
-  max-width: 42.86em;
-  margin: auto;
-}
-
-/* styling van de eerste sectie (verhalen) */
-body .homepage>section:nth-of-type(1) {
-  position: relative;
-  z-index: 1;
-  background: #ffffff;
-  border: 0.05em solid rgba(var(--b6a, 219, 219, 219), 1);
-  border-radius: .2em;
-  margin-bottom: 2em;
-}
-
-/* styling voor de verder knop */
-body .homepage>section:nth-of-type(1)>button {
-  position: absolute;
-  top: 3.2em;
-  right: .66em;
-  background: url("../images/verderknop.svg");
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  border: transparent;
-  box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  color: transparent;
-  width: 1.7em;
-  height: 1.7em;
-}
-
-/* de scrollbar tranparant maken */
-body .homepage>section:nth-of-type(1)>::-webkit-scrollbar {
-  background: transparent;
-}
-
-body .homepage>section:nth-of-type(1)>ul {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  padding: 0 0;
-  padding-top: 1em;
-  margin: 0 0;
-  list-style: none;
-  overflow-x: scroll;
-}
-
-body .homepage>section:nth-of-type(1)>ul>li {
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 0;
-  padding-right: .45em;
-  min-width: 6.147em;
-  max-width: 6.65em;
-  font-size: 0.86em;
-}
-
-/* padding rechts voor alleen de eerste story */
-body .homepage>section:nth-of-type(1)>ul>li:first-of-type {
-  padding-left: 1.16279em;
-}
-
-/* padding rechts voor alleen de laatste story */
-body .homepage>section:nth-of-type(1)>ul>li:nth-last-of-type(1) {
-  padding-right: 1em;
-  padding-left: .25em;
-}
-
-body .homepage>section:nth-of-type(1) ul>li>button {
-  height: 4.483em;
-  width: 4.483em;
-}
-
-/* zorgt ervoor dat elk verhaal een border om zich krijgt */
-body .homepage>section:nth-of-type(1) ul>li>button>img {
-  height: 3.802em;
-  width: 3.802em;
-  border: double .5em white;
-  border-radius: 50%;
-  background-image: linear-gradient(white, white),
-    linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-}
-
-body .homepage>section:nth-of-type(1)>ul>li>p {
-  margin-top: .6em;
-  margin-bottom: 0em;
-  font-size: 1em;
-  letter-spacing: .01em;
-  max-width: 6.147em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* styling van de h2 */
-body .homepage h2 {
-  font-weight: 600;
-  font-style: normal;
-  font-size: 1em;
-}
-
-/* styling van time */
-body .homepage time {
-  display: block;
-  font-weight: 300;
-  font-style: normal;
-  font-size: .715em;
-  text-transform: uppercase;
-  color: #8e8e8e;
-  padding: 0 1.594em;
-  padding-bottom: 1em;
-  margin: 0 0;
-}
-
-/* styling article */
-body .homepage article {
-  margin-bottom: 2em;
-}
-
-body .homepage article>header {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 3.929em 2.3fr 0.2fr;
-  grid-template-rows: 0.5fr 0.5fr;
-  gap: 0px 0px;
-  grid-template-areas: "profiel tekst button"
-    "profiel tekst button";
-  margin-right: 1.14286em;
-  margin-left: 1em;
-  margin-top: .7em;
-  margin-bottom: .7em;
-}
-
-/* styling button van profiel */
-body .homepage article>header>a {
-  grid-area: profiel;
-  border: none;
-  width: 3.15em;
-  height: 3.15em;
-}
-
-/* de image in de button stylen 
-wanneer het profiel ook een verhaal heeft*/
-body .homepage article>header>a>button>img {
-  width: 2.3em;
-  height: 2.3em;
-  border: double .5em white;
-  border-radius: 50%;
-  background-image: linear-gradient(white, white),
-    linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-}
-
-/* de image niet stylen wanneer er geen verhaal is */
-body .homepage article:nth-of-type(3)>header>a>button>img {
-  width: 2.3em;
-  height: 2.3em;
-  border-radius: 50%;
-  background-image: none;
-}
-
-body .homepage article>header>h2 {
-  grid-area: tekst;
-  grid-row-start: 1;
-  grid-row-end: -1;
-  padding: 0;
-  margin-bottom: 1.2em;
-}
-
-/* zorgt ervoor dat wanneer een header geen p ook heeft die in het midden wordt gezet */
-body .homepage article>header>a+h2 {
-  grid-area: tekst;
-  grid-row-start: 1;
-  grid-row-end: -1;
-  padding: 0;
-  margin-bottom: .1em;
-}
-
-body .homepage article>header>h2>a {
-  padding: 0;
-}
-
-body .homepage article>header>p {
-  grid-area: tekst;
-  align-self: center;
-  margin-top: 1.5em;
-  margin-left: 0em;
-  padding: 0;
-  font-size: 0.86em;
-  color: #262626;
-}
-
-body .homepage article>header>p>a {
-  text-decoration: none;
-  color: #262626;
-  font-weight: 600;
-}
-
-body .homepage article>header>button {
-  grid-area: button;
-  background: url("../images/opties.svg");
-  background-repeat: no-repeat;
-  background-size: 1.14em 1.14em;
-  width: 1.14em;
-  border: none;
-  overflow: hidden;
-  color: transparent;
-  align-self: center;
-  justify-self: right;
-  padding: 0em;
-  margin: 0em;
-}
-
-/* username stylen */
-body .homepage article h2 a {
-  font-weight: 600;
-  font-style: normal;
-  font-size: 1em;
-  color: #262626;
-  text-decoration: none;
-  padding: 0em 1.14em;
-}
-
-button {
-  outline: none;
-}
-
-/* Als je over een button hovert lijkt het op een link */
-button:hover {
-  cursor: pointer;
-}
-
-.like-button-groot {
-  background: url("../images/hart.svg");
-  background-repeat: no-repeat;
-  border: none;
-  overflow: hidden;
-  color: transparent;
-  width: 2em;
-  height: 2em;
-  margin-right: 1.14em;
-  margin-left: 1.14em;
-  margin-top: 0.71em;
-  margin-bottom: 0.57em;
-  animation-name: unlike-animation;
-  animation-duration: .3s;
-}
-
-/* zorgt ervoor dat de image veranderd naar een rood hartje */
-.like-button-groot.grootGeliked {
-  background: url("../images/hartrood.svg");
-  background-repeat: no-repeat;
-  border: none;
-  overflow: hidden;
-  color: transparent;
-  width: 2em;
-  height: 2em;
-  margin-right: 1.14em;
-  margin-left: 1.14em;
-  margin-top: 0.71em;
-  margin-bottom: 0.57em;
-  animation-name: like-animation;
-  animation-duration: .3s;
-}
-
-/* De unlike animatie omdat deze ook nodig is */
-@keyframes unlike-animation {
-
-  0%,
-  100% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.2);
-  }
-
-  90% {
-    transform: scale(0.9);
-  }
-}
-
-/* like animatie */
-@keyframes like-animation {
-
-  0%,
-  100% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.2);
-  }
-
-  90% {
-    transform: scale(0.9);
-  }
-}
-
-body .homepage article>button:nth-of-type(2) {
-  background: url("../images/reacties.svg");
-  background-repeat: no-repeat;
-  border: none;
-  overflow: hidden;
-  color: transparent;
-  width: 2em;
-  height: 2em;
-  margin-right: 1.14em;
-  margin-top: 0.71em;
-  margin-bottom: 0.57em;
-}
-
-body .homepage article>button:nth-of-type(3) {
-  background: url("../images/direct.svg");
-  background-repeat: no-repeat;
-  border: none;
-  overflow: hidden;
-  color: transparent;
-  width: 2em;
-  height: 2em;
-  margin-top: 0.71em;
-  margin-bottom: 0.57em;
-}
-
-body .homepage article>button:nth-of-type(4) {
-  background: url("../images/bookmark.svg");
-  background-repeat: no-repeat;
-  border: none;
-  overflow: hidden;
-  color: transparent;
-  float: right;
-  width: 2em;
-  height: 2em;
-  padding: 0em 1.43em;
-  margin-top: 0.71em;
-  margin-bottom: 0.57em;
-}
-
-/* Het aantal likes de button daarvan */
-body .homepage article>button:nth-of-type(5) {
-  display: block;
-  border: none;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 1em;
-  background: none;
-  padding: 0em 1.14em;
-  padding-bottom: .5em;
-}
-
-body .homepage article p {
-  padding: 0em 1.14em;
-}
-
-body .homepage article p>a {
-  text-decoration: none;
-  color: #00376b;
-}
-
-body .homepage article>img:nth-of-type(1) {
-  width: 100%;
-}
-
-body .homepage article>footer {
-  padding: 0 1.14em;
-  padding-bottom: .5em;
-  margin: 0 0;
-}
-
-
-body .homepage article>footer>h2:first-of-type {
-  display: inline;
-  padding: 0 0;
-  margin: 0 0;
-}
-
-body .homepage article>footer>h2>a {
-  display: inline;
-  padding: 0 0;
-  margin: 0 0;
-}
-
-body .homepage article>footer>p:first-of-type {
-  display: inline;
-  padding: 0 0;
-  margin: 0 0;
-  line-height: 1.286em;
-}
-
-/* De opmerkingen bekijken details */
-body .homepage article>footer>details {
-  width: 100%;
-  padding: .3em 0;
-  margin: 0 0;
-  line-height: 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 100%;
-  padding: .3em 0;
-  color: #8e8e8e;
-}
-
-/* zorgt ervoor dat er geen pijltje voorstaat */
-body .homepage article>footer>details>summary::-webkit-details-marker {
-  display: none;
-}
-
-body .homepage article>footer>details>article {
-  width: 100%;
-  padding: .3em 0;
-  margin: 0 0;
-  line-height: 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 100%;
-}
-
-body .homepage article>footer>details>article>div {
-  display: flex;
-  flex-direction: row;
-}
-
-body .homepage article>footer>details>article>div>h2>a {
-  align-self: flex-start;
-  padding: 0 0;
-}
-
-body .homepage article>footer>details>article>div>h2 {
-  align-self: flex-start;
-  padding: 0 0;
-}
-
-body .homepage article>footer>details>article>div>p {
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: .3em;
-  padding-right: 0em;
-  margin: 0 0;
-}
-
-.like-button-klein {
-  background: url("../images/hart.svg");
-  background-repeat: no-repeat;
-  overflow: hidden;
-  border: none;
-  color: transparent;
-  width: .9em;
-  height: .9em;
-  animation-name: unlike-animation;
-  animation-duration: .3s;
-}
-
-.like-button-klein.kleinGeliked {
-  background: url("../images/hartrood.svg");
-  background-repeat: no-repeat;
-  overflow: hidden;
-  border: none;
-  color: transparent;
-  width: .9em;
-  height: .9em;
-  animation-name: like-animation;
-  animation-duration: .3s;
-}
-
-body .homepage article>footer>article {
-  width: 100%;
-  padding: .3em 0;
-  margin: 0 0;
-  line-height: 1em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 100%;
-}
-
-/* body .homepage article>footer>article.verwijder {
-  display: none;
-} */
-
-body .homepage article>footer>article>div {
-  display: flex;
-  flex-direction: row;
-}
-
-body .homepage article>footer>article>div>h2>a {
-  align-self: flex-start;
-  padding: 0 0;
-}
-
-body .homepage article>footer>article>div>h2 {
-  align-self: flex-start;
-  padding: 0 0;
-}
-
-
-body .homepage article>footer>article>div>p {
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: .3em;
-  padding-right: 0em;
-  margin: 0 0;
-}
-
-body .homepage article>footer>article>button {
-  background: url("../images/hart.svg");
-  background-repeat: no-repeat;
-  overflow: hidden;
-  border: none;
-  color: transparent;
-  width: .9em;
-  height: .9em;
-}
-
-/* De opmerkingen plaatsen balk die niet wordt weergeven op kleine schermen */
-body .homepage article>form {
-  display: none;
-}
-
-body>footer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  place-content: center;
-  align-items: center;
-  max-width: 44em;
-  margin: auto;
-  margin-top: 2em;
-  margin-bottom: 4.4em;
-}
-
-body>footer>ul {
-  display: flex;
-  list-style: none;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: auto;
-  margin-bottom: 1em;
-}
-
-body>footer>ul>li {
-  display: flex;
-  justify-content: space-between;
-  margin: .2em .5em;
-}
-
-body>footer>ul>li>a {
-  text-decoration: none;
-  font-weight: 400;
-  font-style: normal;
-  font-size: .86em;
-  color: #8e8e8e;
-}
-
-/* Taal kiezen select */
-body>footer>select {
-  display: inline-block;
-  justify-content: center;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: .86em;
-  color: #8e8e8e;
-  border: none;
-  background: none;
-  width: 7em;
-  text-overflow: ellipsis;
-  margin-right: 1em;
-}
-
-body>footer>p {
-  display: inline-block;
-  justify-content: center;
-  text-decoration: none;
-  font-weight: 400;
-  font-style: normal;
-  font-size: .86em;
-  color: #8e8e8e;
-}
-
-/* responsive maken */
-@media (max-width: 355px) {
-
-  /* zorgt ervoor dat de header op een iphone 5 ook nog goed is */
-  body>div>header>nav>ul>li {
-    padding-left: .5em;
-  }
-}
-
-@media (min-width: 600px) {
-
-  /* zoekbalk toevoegen */
-  body>div>header>input {
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    height: 100%;
+    background: #ebebeb url(../images/tilebg.png) repeat;
+    font-family: "Open Sans", "Lucida Sans Unicode", "Lucida Grande", Garuda, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+#topImg {
+    display: none;
+}
+
+#container {
+    max-width: 889px;
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    box-shadow: 0px 0px 28px -1px rgba(0,0,0,0.75);
+    margin: 0px auto;
+    background: #fff;
+}
+
+#container.broadcontent .page-section {
+    padding: 0 2%;
+    margin-top: 5%;
+}
+
+a {
+	color: #860000;
+	text-decoration: none;
+}
+a:hover {
+	color: #8fbe30;
+}
+
+#menuWrapper {
+    width: 170px;
+    height: 500px;
+    float: left;
+}
+
+@media (max-width: 900px) {
+    #menuWrapper {
+        display: none;
+    }
+    h2 {
+        margin-left: 2%;
+    }
+}
+
+#menu {
+    width: 169px;
+    height: 100%;
+    float: left;
+    border-right: 1px solid #860000;
+    color: #860000;
+    padding-bottom: 25px;   
+}
+    #menu ul {
+        margin-top: 240px;
+        list-style: none;
+    }
+    #menu ul li {
+        text-align: right;
+        margin-bottom: 5px;
+        margin-right: 10px;
+    }
+    
+    #linkbox {
+        margin-left: 9px;
+        margin-top: 25px;
+    }
+
+#nonmenu {
+    overflow: hidden;
+}
+
+#footer-wrapper {
+    width: 100%;
+    background: #fcf5f5;
+    border-top: 1px solid #830000;
+    margin-top: 50px;
+}
+#footer {
+    height: 60px;
+    padding: 25px;
+    font-size: 11px;
+}
+    #footer ul {
+        list-style: none;
+    }
+    #footer ul li {
+        float: left;
+        margin-right: 10px;
+    }
+    #footer p {
+        clear: both;
+        margin-top: 10px;
+    }
+
+h1#siteHeader a {
     display: block;
-  }
-}
-
-@media (min-width: 640px) {
-
-  /* de header sectie komt wat meer van de header af te staan */
-  body .homepage>section:nth-of-type(1) {
-    margin-top: 2.308em;
-  }
-
-  /* alle articles krijgen een background en een border */
-  body .homepage>section>article {
-    background-color: #ffffff;
-    border: 0.05em solid rgba(var(--b6a, 219, 219, 219), 1);
-    border-radius: .2em;
-    margin-bottom: 4em;
-  }
-}
-
-/* Opmerkingen balk weergeven met styling ervan */
-@media (min-width: 735px) {
-  body .homepage article>form {
-    display: flex;
-    border-top: 0.05em solid rgba(var(--ce3, 239, 239, 239), 1);
-    padding: 0 1.14em;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 3.5em;
-  }
-
-  body .homepage article>form>textarea {
-    border: none;
-    resize: none;
-    min-width: 36em;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-weight: 400;
-    font-size: 1em;
-    color: #262626;
-    padding: 0 0;
-  }
-
-  body .homepage article>form>input[type=submit] {
-    border: none;
-    align-self: center;
-    background: none;
-    color: #0095f6;
-    opacity: .3;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 1em;
-    padding: 0 0;
-    margin-left: .5em;
-  }
-}
-
-
-
-
-/* vanaf hier begint de css voor de profiel pagina */
-/* styling article */
-body>.profielheader {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  background: #ffffff;
-  border-bottom: 0.05em solid rgba(var(--b6a, 219, 219, 219), 1);
-}
-
-/* styling van de header */
-body>.profielheader>header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 3.94em;
-  max-height: 3.94em;
-  max-width: 64.38em;
-  margin: auto;
-  background: #ffffff;
-  margin-bottom: 0.1em;
-  padding: 0em 1.42857em;
-}
-
-body>.profielheader>header>h1 {
-  display: inline;
-  font-size: 2em;
-  font-weight: bold;
-  margin: 0;
-  margin-top: .3em;
-}
-
-body>.profielheader>header>h1>a {
-  display: flex;
-  line-height: 0;
-  font-size: 0;
-  color: transparent;
-}
-
-body>.profielheader>header>input {
-  display: none;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 1em;
-  text-decoration: none;
-  color: #8e8e8e;
-  align-items: center;
-  height: 2em;
-  width: 15.357em;
-  padding-left: 5.714em;
-  box-sizing: border-box;
-  background: url("../images/zoek.png");
-  background-size: 0.714em;
-  background-repeat: no-repeat;
-  background-color: #fafafa;
-  background-position: 4.429em 50%;
-  border: solid 1px #dbdbdb;
-  border-radius: 0.214em;
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
-::placeholder {
-  text-decoration: none;
-}
-
-body>.profielheader>header input:focus {
-  padding-left: 16px;
-  background-position: 0;
-}
-
-body>.profielheader>header>nav {
-  margin: 0em;
-}
-
-body>.profielheader>header>nav>ul {
-  list-style: none;
-  align-items: center;
-  padding: 0em;
-}
-
-body>.profielheader>header>nav>ul>li {
-  display: inline-block;
-  padding-left: 1.3em;
-}
-
-body>.profielheader>header>nav>ul>li>a {
-  line-height: 0;
-  font-size: 0;
-  color: transparent;
-}
-
-body>.profielheader>header>nav>ul>li:first-of-type {
-  padding-left: 0em;
-}
-
-body>.profielheader>header>nav>ul>li:nth-of-type(4) {
-  padding-right: 1.3em;
-}
-
-body>.profielheader>header>nav>ul>li:nth-of-type(5) {
-  border: .1em solid black;
-  border-radius: 50%;
-  width: 22px;
-  height: 22px;
-  padding: .15em .15em;
-}
-
-body>.profielheader>header>nav>ul>li:nth-of-type(5) img {
-  justify-self: center;
-  align-self: center;
-}
-
-body .profiel {
-  max-width: 67em;
-  margin: auto;
-  margin-top: 1em;
-  overflow-x: hidden;
-}
-
-body .profiel section:first-of-type {
-  padding-bottom: .9em;
-  border-bottom: 0.05em solid rgba(var(--b6a, 219, 219, 219), 1);
-}
-
-/* Het bovenste gedeelte met de belangrijkse dingen voor de gebruiker */
-body .profiel section>header {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 7em 15.5em 1.3fr;
-  grid-template-rows: 1.5fr 1.5fr;
-  gap: 15px 0px;
-  grid-template-areas: "profiel tekst1 instellingen"
-    "profiel button button";
-  margin-right: 1.14286em;
-  margin-left: 1em;
-  margin-top: .5em;
-  margin-bottom: 1.8em;
-}
-
-/* styling button van profiel */
-body .profiel section>header>button:first-of-type {
-  grid-area: profiel;
-  border: none;
-  background: none;
-  width: 5.7em;
-  height: 5.7em;
-}
-
-/* de image in de button stylen*/
-body .profiel section>header>button:first-of-type>a>img {
-  width: 5.7em;
-  height: 5.7em;
-  border: none;
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 .1px #000000;
-}
-
-body .profiel section>header>p {
-  grid-area: tekst1;
-  padding: 0;
-  margin-bottom: 0;
-  align-self: center;
-  font-size: 2em;
-  font-weight: 200;
-  color: #262626;
-}
-
-body .profiel section>header>button:nth-of-type(2) {
-  grid-area: instellingen;
-  background: url("../images/instellingen.svg");
-  background-repeat: no-repeat;
-  background-size: 1.8em 1.8em;
-  width: 1.8em;
-  height: 1.8em;
-  border: none;
-  overflow: hidden;
-  color: transparent;
-  align-self: center;
-  justify-self: flex-start;
-  padding: 0em;
-  margin: 0em;
-}
-
-/* profiel bewerken button */
-body .profiel section>header>button:last-of-type {
-  grid-area: button;
-  padding: 0;
-  border: 1px solid rgba(var(--ca6, 219, 219, 219), 1);
-  border-radius: 0.2857em;
-  min-height: 2.143em;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1em;
-  font-weight: 600;
-}
-
-/* username stylen */
-body .profiel section h2 a {
-  font-weight: 600;
-  font-style: normal;
-  font-size: 1em;
-  color: #262626;
-  text-decoration: none;
-  padding: 0em 1.14em;
-}
-
-/* styling van de extra informatie over de gebruiker */
-body .profiel section>footer {
-  margin-left: 1em;
-}
-
-body .profiel section:first-of-type>footer>p {
-  margin-bottom: .5em;
-}
-
-body .profiel section:first-of-type>footer>p:first-of-type {
-  font-weight: 500;
-}
-
-body .profiel section:first-of-type>footer>p>a {
-  font-weight: 500;
-  color: #00376B;
-  text-decoration: none;
-}
-
-/* styling van de berichten, volgers, volgend */
-body .profiel section:nth-of-type(2) {
-  padding-top: .8em;
-  padding-bottom: .8em;
-  border-bottom: 0.05em solid rgba(var(--b6a, 219, 219, 219), 1);
-}
-
-body .profiel section:nth-of-type(2)>ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas:
-    ". . .";
-}
-
-body .profiel section:nth-of-type(2)>ul>li {
-  max-width: 4em;
-  justify-self: center;
-  text-align: center;
-  line-height: 1.4em;
-}
-
-body .profiel section:nth-of-type(2)>ul>li::first-line {
-  font-weight: 500;
-}
-
-body .profiel section:nth-of-type(2)>ul>li>a {
-  text-decoration: none;
-  color: #262626;
-}
-
-/* styling van de nav */
-body .profiel section:nth-of-type(3) {
-  padding-top: .72em;
-  padding-bottom: .72em;
-  border-bottom: .05em solid rgba(var(--b6a, 219, 219, 219), 1);
-}
-
-body .profiel section:nth-of-type(3)>nav>ul {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 3em;
-  margin-right: 3em;
-}
-
-body .profiel section:nth-of-type(3)>nav>ul>li {
-  vertical-align: middle;
-  align-self: center;
-}
-
-body .profiel section:nth-of-type(3)>nav>ul>li>button {
-  width: 100%;
-  height: 100%;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: .85714em;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-body .profiel section:nth-of-type(3)>nav>ul>li:first-of-type {
-  background: url("../images/grid.svg");
-  background-repeat: no-repeat;
-  overflow: hidden;
-  border: none;
-  color: transparent;
-  width: 1.715em;
-  height: 1.715em;
-}
-
-body .profiel section:nth-of-type(3)>nav>ul>li:nth-of-type(2) {
-  background: url("../images/instagramtv.svg");
-  background-repeat: no-repeat;
-  overflow: hidden;
-  border: none;
-  color: transparent;
-  width: 1.715em;
-  height: 1.715em;
-}
-
-body .profiel section:nth-of-type(3)>nav>ul>li:nth-of-type(3) {
-  background: url("../images/bookmark.svg");
-  background-repeat: no-repeat;
-  overflow: hidden;
-  border: none;
-  color: transparent;
-  width: 1.715em;
-  height: 1.715em;
-}
-
-body .profiel section:nth-of-type(3)>nav>ul>li:last-of-type {
-  background: url("../images/getagd.svg");
-  background-repeat: no-repeat;
-  overflow: hidden;
-  border: none;
-  color: transparent;
-  width: 1.715em;
-  height: 1.715em;
-}
-
-/* styling van de geposte foto's */
-body .profiel section:last-of-type {
-  display: grid;
-  width: 100%;
-  height: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 3px 3px;
-  grid-template-areas:
-    ". . ."
-    ". . ."
-    ". . .";
-  margin-bottom: 1.8em;
-}
-
-body .profiel section:last-of-type img {
-  width: 100%;
-  object-fit: cover;
-  min-width: 9.7143em;
-  min-height: 9.7143em;
-}
-
-/* responsive maken */
-@media (max-width: 355px) {
-
-  /* zorgt ervoor dat de header op een iphone 5 ook nog goed is */
-  body>.profielheader>header>nav>ul>li {
-    padding-left: .5em;
-  }
-}
-
-@media (min-width: 600px) {
-
-  /* zoekbalk toevoegen */
-  body>.profielheader>header>input {
-    display: block;
-  }
-}
-
-@media (min-width: 735px) {
-
-  body>.profiel {
-    padding: 0em 1.5em;
-  }
- 
-  /* Padding op 0 */
-  body .profiel section:nth-of-type(3) {
-    padding: 0;
-  }
-
-  /* styling van de nav */
-  body .profiel section:nth-of-type(3)>nav {
-    height: 3.6em;
-  }
-  
-  body .profiel section:nth-of-type(3)>nav>ul {
-    justify-content: flex-start;
-    margin: auto;
-    width: 34.5em;
-    padding-top: 1.25em;
-  }
-
-  body .profiel section:nth-of-type(3)>nav>ul>li>button {
-    width: auto;
-    margin: 0;
-    padding: 0;
-    padding-left: 2em;
-    align-items: center;
-    text-align: center;
-  }
-
-  /* overflow visible zorgt ervoor dat de tekst erbij komt te staan */
-  body .profiel section:nth-of-type(3)>nav>ul>li:first-of-type {
-    background: url("../images/grid\(zwart\).svg");
+    max-width: 391px;
+    width: 90%;
+    height: 92px;
+    background-image: url(../images/logo.png);
+    background-size: contain;
     background-repeat: no-repeat;
-    overflow: visible;
-    border: none;
-    color: #262626;
-    width: .85724em;
-    height: .85724em;
-    padding-right: 10em;
-  }
+    margin: 6% auto;
+}
+    h1#siteHeader a span {
+        display: none;
+    }
+	
+#mainContent {
+    text-align: justify;
+    line-height: 19px;
+    min-height: 100%;
+}
+    #mainContent section {
+        padding: 0 7%;
+        padding-right: 15%;
+    }
+    @media (max-width: 600px) {
+        #mainContent section {
+            padding: 0 10%;
+        }
+    }
+    #mainContent p {
+        margin-bottom: 12px;
+    }
+    #mainContent ul {
+        margin: 20px;
+    }
 
-  body .profiel section:nth-of-type(3)>nav>ul>li:nth-of-type(2) {
-    overflow: visible;
-    border: none;
-    color: #8E8E8E;
-    width: .85724em;
-    height: .85724em;
-    padding-right: 7em;
-  }
+/* form styling */
+	textarea, input[type="text"] {
+		width: 100%;
+        max-width: 300px;
+		padding: 0.5em;
+		border-radius: 5px;
+		border: 1px solid #f9cccc;
+		font-family: Consolas, Courier, "Courier New", monospace;
+	}
+	textarea {
+		height: 80px;
+	}
+	.field.radio input {
+		margin-right: 4px;
+	}
+	.field.radio label {
+		margin-right: 14px;
+		position: relative;
+		top: -1px;
+	}
+	.placeholder {
+		color: #aaaaaa;
+	}
+	.error {
+		color: #ff0000;
+	}
 
-  body .profiel section:nth-of-type(3)>nav>ul>li:nth-of-type(3) {
-    overflow: visible;
-    border: none;
-    color: #8E8E8E;
-    width: .85724em;
-    height: .85724em;
-    padding-right: 10em;
-  }
+#scheduler {
+	background: #fcf5f5;
+	border-radius: 10px;
+	padding: 5% 5%;
+    padding-bottom: 15px;
+	margin: 20px auto;
+    max-width: 580px;
+    text-align: left;
+}
+@media (max-width: 600px) {
+    #scheduler {
+        border-radius: 0px;
+    }
+    #scheduler h3 {
+        font-size: 140%;
+    }
+}
+	#scheduler ol {
+		list-style: none;
+	}
+	#scheduler ol li>div {
+		font-weight: normal;
+		color: #000000;
+		font-size: 13px;
+	}
+	#scheduler li {
+		margin-bottom: 30px;
+	}
+	#scheduler li.last {
+		margin-bottom: 14px;
+	}
+	#scheduler h3 {
+		font-size: 160%;
+		font-weight: normal;
+		margin-bottom: 12px;
+        line-height: 25px;
+	}
+	#scheduler p {
+		font-size: 11px;
+		margin-top: 4px;
+	}
+	#scheduler #locations-yes {
+		margin-bottom: 5px;
+	}
+	#scheduler #scheduler-submit {
+		font-weight: normal;
+		padding: 10px 40px;
+		color: #860000;
+        margin-bottom: 10px;
+	}
 
-  body .profiel section:nth-of-type(3)>nav>ul>li:last-of-type {
-    overflow: visible;
-    border: none;
-    color: #8E8E8E;
-    width: .85724em;
-    height: .85724em;
-    padding-right: 10em;
-  }
+	.ui-widget {
+		font-size: 13px !important;
+	}
+	.ui-dialog {
+		box-shadow: 4px 4px 6px #999;
+		border: 1px solid #968888 !important;
+	}
+	.ui-dialog input {
+		margin-top: 5px;
+		width: 150px;
+	}
+    
+    #skyscraper {
+        float: right;
+    }
+    @media (min-width: 600px) {
+        #skyscraper ins {
+            width: 120px;
+            height: 600px;
+        }
+    }
+    @media (max-width: 599px) {
+        #skyscraper ins {
+            display: none;
+        }
+    }
+        
 
-  /* meer ruimte tussen de posts */
-  body .profiel section:last-of-type {
-    gap: 28px 28px;
-  }
+#advanced-options {
+    height: 193px; /* set this because of the sliding animation */
+}
+#advanced-options .field-wrapper {
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+#advanced-options .field {
+    font-size: 11px;
+}
+.question-label {
+    margin-top: 14px;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+.question-label.first {
+    margin-top: 0px;
+}
+.tooltip {
+    cursor: help;
+}
+
+.clear {
+    clear: both;
+}
+
+.tournament-url {
+    padding-left: 3em;
+}
+@media (max-width: 600px) {
+    .tournament-url {
+        word-wrap: break-word;
+        text-indent: -1em;
+    }
+}
+
+h2 {
+    color: #860000;
+    font-weight: bold;
+    border-bottom: 1px solid #860000;
+    margin-right: 5%;
+    margin-bottom: 3%;
+    padding-bottom: 2px;
+}
+.schedule {
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #ccc;
+    table-layout: fixed;
+    text-align: left;
+    width: 100%;
+    margin: 0px auto;
+}
+    .schedule td {
+        padding: 1%;
+        vertical-align: top;
+        font-size: 100%;
+    }
+    .schedule.adminrights td.editable:hover {
+        background: url(../images/icon-edit.png) right 6px no-repeat;
+    }
+    .schedule tbody.even {
+        background: #eee;
+    }
+    .schedule tr {
+        border-bottom: 1px solid #ccc;
+        padding: 1%;
+    }
+    .schedule tr:hover {
+        background: #f9f9f9;
+    }
+    .schedule th {
+        border-bottom: 3px solid #ccc;
+        text-align: left;
+        padding-bottom: 2%;
+        padding: 1%;
+        font-weight: normal;
+        font-size: 120%;
+    }
+    .schedule tbody.row-separator:hover, .schedule tbody.row-separator tr:hover, .schedule thead tr:hover {
+        background: none;
+    }
+    .schedule tbody.row-separator td {
+        border-bottom: 3px solid #ccc;
+        border-top: 3px solid #ccc;
+    }
+    
+    /* cell widths, hard-code for consistent appearance with editing */
+    .schedule th.round-header {
+        width: 6%;
+    }
+    @media (max-width: 900px) {
+        .schedule th.round-header {
+            visibility: hidden;
+        }
+    }
+
+    .schedule td.round-number {
+        text-align: center;
+        width: 7%;
+    }
+    .schedule .player {
+        width: 24%;
+    }
+    .schedule td.separator, .schedule th.separator {
+        text-align: center;
+        width: 2%;
+    }
+    .schedule .score {
+        width: 13%;
+    }
+    .schedule td.note, .schedule th.note {
+        width: 19%;
+    }
+    
+    .schedule th.player, th.score {
+        overflow: visible;
+    }
+    
+    @media (min-width: 600px) {
+        .schedule.locations-scheduled .player, .schedule.locations-scheduled .location {
+            width: 18%;
+        }
+        .schedule.locations-scheduled .score {
+            width: 10%;
+        }
+        .note-location-switch {
+            display: none;
+        }
+        .mobile-hint {
+            display: none;
+        }
+    }
+    @media (max-width: 599px) {
+        .schedule.locations-scheduled .note {
+            display: none;
+        }
+        .schedule th.note-location-switch {
+            width: 19%;
+            font-size: 100%;
+            line-height: 100%;
+        }
+        th.note-location-switch span {
+            display: block;
+            color: #ccc;
+        }
+        th.note-location-switch span.active {
+            color: #000;
+        }
+        th.note-location-switch .location-switch {
+            /*border-bottom: 1px solid #000;*/
+        }
+        .schedule.locations-scheduled th.note, .schedule.locations-scheduled th.location {
+            display: none;
+        }
+    }
+
+
+    .schedule td.being-edited {
+        padding: 0.1em;
+        padding-left: 1%;
+    }
+    .schedule td.editable input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        font-size: 100%;
+        background: #fffff5;
+        font-family: "Open Sans", "Lucida Sans Unicode", "Lucida Grande", Garuda, Arial, Helvetica, sans-serif;
+    }
+    
+    .addthis_toolbox {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    
+    
+.schedule.results td, .schedule.results th {
+    text-align: center;
+}
+.schedule.results .player {
+    width: 20%;
+    text-align: left;
+}
+.schedule.results .rank {
+    width: 5%;
+    text-align: left;
+}
+
+@media (max-width: 599px) {
+    .schedule.results thead {
+        display: none;
+    }
+    .schedule.results {
+        border-top: 3px solid #ccc;
+    }
+    .schedule.results .player {
+        width: 40%;
+    }
+}
+
+.fineprint {
+    font-size: 11px;
+    line-height: 14px;
+    text-align: left;
+}
+    
+.status-popup {
+    position: fixed;
+    top: -10px;
+    left: 50%;
+    width: 350px;
+    margin-left: -183px;
+    height: 20px;
+    padding: 6px;
+    padding-top: 16px;
+    background-color: #ffffcc;
+    border: 1px solid #999900;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10;
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .status-popup {
+        border-radius: 0px;
+    }
+}
+
+.page-section {
+    margin-top: 10%;
+}
+.page-section ol, .page-section ul {
+    padding: 0px 5%;
+}
+.page-section li {
+    margin-bottom: 10px
+}
+
+.fb-like {
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+#rightAd {
+    float: right;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+.horizontalAd {
+    margin: 1em auto;
+    padding: 0 2%;
+}
+@media (min-width: 599px) {
+    .home-top-ad {
+        display: none;
+    }
+}
+#sync-link {
+    font-size: 10px;
+}
+
+a.highlight {
+    display: block;
+    border: 1px solid #860000;
+    border-radius: 8px;
+    padding: 3px;
+    text-align: center;
+    margin-top: 20px;
+}
+a.highlight:hover {
+    color: #fff;
+    background: #860000;
+}
+
+p.admintext {
+    margin-top: 20px;
+}
+
+strong {
+    font-weight: 700;
+}
+
+#tournament-number-highlight {
+    font-style: italic;
+    text-align: center;
+}
+
+#comments-list {
+    display: none;
+}
+
+@media (max-width: 525px) {
+    #skyscraper {
+        display: none;
+    }
+}
+
+
+#disqus_thread {
+    margin: 0 -2%;
+}
+
+.alert {
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: 110%;
+    margin: 6%;
+    padding: 1% 3% !important;
 }
 
 /* een hele handige code om te kijken wat buiten de lijnen valt.
