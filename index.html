@@ -6,7 +6,7 @@
     <meta name="author" content="Jesper van der Greft">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>LeHomies Bierpong</title>
+    <title>Instagram</title>
 
     <link href="styles/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/tbj6yrb.css">
@@ -14,13 +14,409 @@
 </head>
 
 <body>
+    <!-- Deze div kan eigenlijk niet anders heb ik met Deanne besproken het zorgt voor de background
+    dat die kan blijven uitbreiden. -->
+    <div>
+        <header>
+            <h1><a href="index.html">instagram logo<img src="images/instagram_logo.png" alt="Het logo vanInstagram"></a>
+            </h1>
+            <input type="text" placeholder="Zoeken">
+            <nav>
+                <ul>
+                    <li><a href="index.html">home <img alt="home icoon" src="images/home.svg" height="22"
+                                viewBox="0 0 48 48" width="21"></a></li>
+                    <li><a href="direct.html">direct <img alt="direct icoon" src="images/direct.svg" height="19"
+                                viewBox="0 0 48 48" width="22"></a></li>
+                    <li><a href="explore.html">explore <img alt="explore icoon" src="images/explore.svg" height="22"
+                                viewBox="0 0 48 48" width="22"></a></li>
+                    <li><a href="activiteitenoverzicht.html">activiteitenoverzicht <img alt="activiteiten icoon"
+                                src="images/hart.svg" height="19" viewBox="0 0 48 48" width="22"></a></li>
+                    <li><a href="profiel.html">profiel <img alt="profiel icoon" src="images/jespervdgreft_.jpg"
+                                height="22" viewBox="0 0 48 48" width="22"></a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+<!-- elke main heeft een eigen class zodat je de inhoud van elke pagina kunt aanpassen maar de header en de footer hetzelfde kan blijven -->
+    <main class="homepage">
+        <!-- Dit is de section van de verhalen, elk verhaal is een button en een verderknop waarmee je zou kunnen bladeren als die werkt -->
+        <section>
+            <button>verder</button>
+            <ul>
+                <li>
+                    <button>
+                        <img src="images/pathethuis.jpg" alt="verhaal van pathethuis">
+                    </button>
+                    <p>pathethuis</p>
+                </li>
+                <li>
+                    <button>
+                        <img src="images/premiereleaguelogo.png" alt="verhaal van premerie league">
+                    </button>
+                    <p>premierleague</p>
+                </li>
+                <li>
+                    <button>
+                        <img src="images/leomessi.jpg" alt="verhaal van leomessi">
+                    </button>
+                    <p>leomessi</p>
+                </li>
+                <li>
+                    <button>
+                        <img src="images/neymarjr.jpg" alt="verhaal van neymarjr">
+                    </button>
+                    <p>neymarjr</p>
+                </li>
+                <li>
+                    <button>
+                        <img src="images/cristiano.jpg" alt="verhaal van cristiano">
+                    </button>
+                    <p>cristiano</p>
+                </li>
+                <li>
+                    <button>
+                        <img src="images/fcbarcelona.jpg" alt="verhaal van fcbarcelona">
+                    </button>
+                    <p>fcbarcelona</p>
+                </li>
+                <li>
+                    <button>
+                        <img src="images/championsleague.jpg" alt="verhaal van championsleague">
+                    </button>
+                    <p>championsleague</p>
+                </li>
+                <li>
+                    <button>
+                        <img src="images/jespervdgreft_.jpg" alt="verhaal van jespervdgreft_">
+                    </button>
+                    <p>jespervdgreft_</p>
+                </li>
+                <li>
+                    <button>
+                        <img src="images/instagram.jpg" alt="verhaal van instagram">
+                    </button>
+                    <p>instagram</p>
+                </li>
+            </ul>
+        </section>
+<!-- Dit is de section van alle articles dus de posts. Elke article bestaat uit een header met gevens over de
+gebruiker die de post erop zet, daaronder de foto die wordt geupload en daaronder een aantal buttons.
+Als laatste de footer waarin de reacties staan en geplaatst kunnen worden. -->
+        <section>
+            <article>
+                <header>
+                    <a href="#"><button><img alt="premiereleague profiel foto"
+                                src="images/premiereleaguelogo.png"></button></a>
+                    <p>Betaald partnerschap met <a href="#">easportsfifa</a></p>
+                    <h2><a href="#">premierleague</a></h2>
+                    <button>opties</button>
+                </header>
 
-    <?php @package WordPress; ?>
-    <?php @var bool; ?>
-    <?php define( 'WP_USE_THEMES', true ); ?>
-    <?php require __DIR__ . '/wp-blog-header.php'; ?>
+                <img src="images/premiereleaguepost.png" alt="post van premiere league met de nominaties voor de premiere league player of the month november met als
+                genomineerden Chillwell, Fernandes, Grealish, Hojbjerg, Ogbonna, Ward-prowse">
 
-<script src="scripts/script.js"></script>
+                <button class="like-button-groot">like</button>
+                <button>reageer</button>
+                <button>direct</button>
+                <button>bookmark</button>
+
+                <button>33.705 vind-ik-leuks</button>
+
+                <footer>
+                    <h2><a href="#">premierleague</a></h2>
+                    <p>Who is your <a href="#">@easportsfifa</a> Player of the Month for November?</p>
+
+                    <details>
+                        <summary>Alle 1.127 opmerkingen bekijken</summary>
+                        <article>
+                            <div>
+                                <h2><a href="#">__davheed</a></h2>
+                                <p>Bruuuuuuno🔥</p>
+                            </div>
+                            <button class="like">reactie like</button>
+                        </article>
+                        <article>
+                            <div>
+                                <h2><a href="#">mufcone</a></h2>
+                                <p>BRUNO 🔴</p>
+                            </div>
+                            <button class="like-button-klein">reactie like</button>
+                        </article>
+                        <article>
+                            <div>
+                                <h2><a href="#">milanknaap</a></h2>
+                                <p>Chilwell for sure</p>
+                            </div>
+                            <button class="like-button-klein">reactie like</button>
+                        </article>
+                        <article>
+                            <div>
+                                <h2><a href="#">dexter1990</a></h2>
+                                <p>Ogbonnnaaa</p>
+                            </div>
+                            <button>reactie like</button>
+                        </article>
+                        <article>
+                            <div>
+                                <h2><a href="#">jaimyberk</a></h2>
+                                <p>Grealish!</p>
+                            </div>
+                            <button>reactie like</button>
+                        </article>
+                        <article>
+                            <div>
+                                <h2><a href="#">matsklop</a></h2>
+                                <p>Italian monster Ogbonna</p>
+                            </div>
+                            <button>reactie like</button>
+                        </article>
+                    </details>
+                    <article>
+                        <div>
+                            <h2><a href="#">__davheed</a></h2>
+                            <p>Bruuuuuuno🔥</p>
+                        </div>
+                        <button>reactie like</button>
+                    </article>
+                    <article>
+                        <div>
+                            <h2><a href="#">mufcone</a></h2>
+                            <p>BRUNO 🔴</p>
+                        </div>
+                        <button>reactie like</button>
+                    </article>
+                </footer>
+
+                <time datetime="2020-12-10T18:00:30.220">15 minuten geleden</time>
+
+                <form action="index.html">
+                    <textarea name="opmerking" cols="70" rows="1" placeholder="Een opmerking toevoegen..."></textarea>
+                    <input type="submit" value="Plaatsen">
+                </form>
+            </article>
+
+            <article>
+                <header>
+                    <a href="#"><button><img alt="neymarjr profiel foto" src="images/neymarjr.jpg"></button></a>
+                    <h2><a href="#">neymarjr</a></h2>
+                    <button>opties</button>
+                </header>
+
+                <img src="images/neymarjrpost.jpg"
+                    alt="post van neymarjr waarop te zien is dat hij Lionel Messi een kus geeft om het te feliciteren met zijn ballon d'or">
+
+                <button class="like-button-groot">like</button>
+                <button>reageer</button>
+                <button>direct</button>
+                <button>bookmark</button>
+
+                <button>4.929.098 vind-ik-leuks</button>
+
+                <footer>
+                    <h2><a href="#">neymarjr</a></h2>
+                    <p>Nos vemos em breve meu amigo ❤️😍🥺</p>
+
+                    <details>
+                        <summary>Alle 44 opmerkingen bekijken</summary>
+                        <article>
+                            <div>
+                                <h2><a href="#">negodoborel</a></h2>
+                                <p>Kkkk tu é pika moleque, brinca com a brincadeira rs</p>
+                            </div>
+                            <button>reactie like</button>
+                        </article>
+                        <article>
+                            <div>
+                                <h2><a href="#">djsnake</a></h2>
+                                <p>🔴🔵</p>
+                            </div>
+                            <button>reactie like</button>
+                        </article>
+                        <article>
+                            <div>
+                                <h2><a href="#">tgmartins</a></h2>
+                                <p>Que dupla 👏🏻</p>
+                            </div>
+                            <button>reactie like</button>
+                        </article>
+                        <article>
+                            <div>
+                                <h2><a href="#">brunoagnello</a></h2>
+                                <p>Nem brinca com isso! 😍</p>
+                            </div>
+                            <button>reactie like</button>
+                        </article>
+                    </details>
+                    <article>
+                        <div>
+                            <h2><a href="#">negodoborel</a></h2>
+                            <p>Kkkk tu é pika moleque, brinca com a brincadeira rs</p>
+                        </div>
+                        <button>reactie like</button>
+                    </article>
+                    <article>
+                        <div>
+                            <h2><a href="#">djsnake</a></h2>
+                            <p>🔴🔵</p>
+                        </div>
+                        <button>reactie like</button>
+                    </article>
+                </footer>
+
+                <time datetime="2020-12-10T16:00:30.220">2 uur geleden</time>
+
+                <form action="index.html">
+                    <textarea name="opmerking" cols="70" rows="1" placeholder="Een opmerking toevoegen..."></textarea>
+                    <input type="submit" value="Plaatsen">
+                </form>
+            </article>
+
+            <article>
+                <header>
+                    <a href="#"><button><img alt="k.mbappe profiel foto" src="images/k.mbappe.jpg"></button></a>
+                    <p>Parc Des Princes</p>
+                    <h2><a href="#">k.mbappe</a></h2>
+                    <button>opties</button>
+                </header>
+
+                <img src="images/k.mbappepost.jpg"
+                    alt="post van k.mbappe waarop te zien is dat hij poseert na een doelpunt met zijn broek hoog omhoog en hij heeft blauw haar en lacht">
+
+                <button class="like-button-groot">like</button>
+                <button>reageer</button>
+                <button>direct</button>
+                <button>bookmark</button>
+
+                <button>2.804.051 vind-ik-leuks</button>
+
+                <footer>
+                    <h2><a href="#">k.mbappe</a></h2>
+                    <p>O.A BUBBLE GUM 🥶🥶🥶</p>
+
+                    <details>
+                        <summary>Alle 16.135 opmerkingen bekijken</summary>
+                        <article>
+                            <div>
+                                <h2><a href="#">pembele.t</a></h2>
+                                <p>BLUE FACE BABY 🥶🥶🥶</p>
+                            </div>
+                            <button>reactie like</button>
+                        </article>
+                        <article>
+                            <div>
+                                <h2><a href="#">pablosarabia92</a></h2>
+                                <p>🤣🤣</p>
+                            </div>
+                            <button>reactie like</button>
+                        </article>
+                        <article>
+                            <div>
+                                <h2><a href="#">enigma2jz</a></h2>
+                                <p>Like ya cut G 🔵</p>
+                            </div>
+                            <button>reactie like</button>
+                        </article>
+                        <article>
+                            <div>
+                                <h2><a href="#">jjwatt</a></h2>
+                                <p>🧊 🧊 🧊</p>
+                            </div>
+                            <button>reactie like</button>
+                        </article>
+                    </details>
+                    <article>
+                        <div>
+                            <h2><a href="#">pembele.t</a></h2>
+                            <p>BLUE FACE BABY 🥶🥶🥶</p>
+                        </div>
+                        <button>reactie like</button>
+                    </article>
+                    <article>
+                        <div>
+                            <h2><a href="#">pablosarabia92</a></h2>
+                            <p>🤣🤣</p>
+                        </div>
+                        <button>reactie like</button>
+                    </article>
+                </footer>
+
+                <time datetime="2020-12-10T15:00:30.220">3 uur geleden</time>
+
+                <form action="index.html">
+                    <textarea name="opmerking" cols="70" rows="1" placeholder="Een opmerking toevoegen..."></textarea>
+                    <input type="submit" value="Plaatsen">
+                </form>
+            </article>
+        </section>
+    </main>
+<!-- Dit is de footer met verschillende menu items en een select waarin je de taal kan kiezen. -->
+    <footer>
+        <ul>
+            <li><a href="#">Info</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Vacatures</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Voorwaarden</a></li>
+            <li><a href="#">Populaire accounts</a></li>
+            <li><a href="#">Hashtags</a></li>
+            <li><a href="#">Locaties</a></li>
+        </ul>
+        <select name="Weergavetaal">
+            <option value="af">Afrikaans</option>
+            <option value="cs">Čeština</option>
+            <option value="da">Dansk</option>
+            <option value="de">Deutsch</option>
+            <option value="el">Ελληνικά</option>
+            <option value="en">English</option>
+            <option value="es">Español (España)</option>
+            <option value="es-la">Español</option>
+            <option value="fi">Suomi</option>
+            <option value="fr">Français</option>
+            <option value="id">Bahasa Indonesia</option>
+            <option value="it">Italiano</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+            <option value="ms">Bahasa Melayu</option>
+            <option value="nb">Norsk</option>
+            <option selected value="nl">Nederlands</option>
+            <option value="pl">Polski</option>
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="pt">Português (Portugal)</option>
+            <option value="ru">Русский</option>
+            <option value="sv">Svenska</option>
+            <option value="th">ภาษาไทย</option>
+            <option value="tl">Filipino</option>
+            <option value="tr">Türkçe</option>
+            <option value="zh-cn">中文(简体)</option>
+            <option value="zh-tw">中文(台灣)</option>
+            <option value="bn">বাংলা</option>
+            <option value="gu">ગુજરાતી</option>
+            <option value="hi">हिन्दी</option>
+            <option value="hr">Hrvatski</option>
+            <option value="hu">Magyar</option>
+            <option value="kn">ಕನ್ನಡ</option>
+            <option value="ml">മലയാളം</option>
+            <option value="mr">मराठी</option>
+            <option value="ne">नेपाली</option>
+            <option value="pa">ਪੰਜਾਬੀ</option>
+            <option value="si">සිංහල</option>
+            <option value="sk">Slovenčina</option>
+            <option value="ta">தமிழ்</option>
+            <option value="te">తెలుగు</option>
+            <option value="vi">Tiếng Việt</option>
+            <option value="zh-hk">中文(香港)</option>
+            <option value="bg">Български</option>
+            <option value="fr-ca">Français (Canada)</option>
+            <option value="ro">Română</option>
+            <option value="sr">Српски</option>
+            <option value="uk">Українська</option>
+        </select>
+        <p>© 2021 Instagram van Facebook</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>

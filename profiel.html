@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jesper van der Greft">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Instagram</title>
+
+    <link href="styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/tbj6yrb.css">
+    <link rel="icon" type="image/png" href="images/instagram-icon.png" />
+</head>
+<!-- Om de header zit een div heen met een class zodat deze header anders gestyled kan worden. -->
+<body>
+    <div class="profielheader">
+        <header>
+            <h1><a href="index.html">instagram logo<img src="images/instagram_logo.png" alt="Het logo van Instagram"></a></h1>
+            <input type="text" placeholder="Zoeken">
+            <nav>
+                <ul>
+                    <li><a href="index.html">home <img alt="home icoon doorzichtige versie" src="images/home(wit).svg" height="22"
+                                viewBox="0 0 48 48" width="21"></a></li>
+                    <li><a href="direct.html">direct <img alt="direct icoon" src="images/direct.svg" height="19"
+                                viewBox="0 0 48 48" width="22"></a></li>
+                    <li><a href="explore.html">explore <img alt="explore icoon" src="images/explore.svg" height="22"
+                                viewBox="0 0 48 48" width="22"></a></li>
+                    <li><a href="activiteitenoverzicht.html">activiteitenoverzicht <img alt="activiteiten icoon"
+                                src="images/hart.svg" height="19" viewBox="0 0 48 48" width="22"></a></li>
+                    <li><a href="profile.html">profiel <img alt="profiel icoon" src="images/jespervdgreft_.jpg" height="22"
+                                viewBox="0 0 48 48" width="22"></a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+<!-- weer een main met een class zodat deze anders gestyled kan worden dan de homepage
+De section bevat een header met daarin de belangrijkste dingen voor de gebruiker.
+Daaronder een footer met wat extra informatie over de gebruiker -->
+    <main class="profiel">
+        <section>
+            <header>
+                <button><a href="#"><img alt="jespervoorschool profielfoto met zijn hond op de foto" src="images/jespervdgreft_.jpg"></a></button>
+                <p>jespervoorschool</p>
+                <button>instellingen</button>
+                <button>Profiel bewerken</button>
+            </header>
+
+            <footer>
+                <p>Jesper van der Greft</p>
+                <p>23 jaar</p>
+                <p>CMD</p>
+                <p>Zaalvoetbal LMV</p>
+                <p><a href="#">jespervandergreft.github.io/portfolio</a></p>
+            </footer>
+        </section>
+<!-- In deze sectie staan wat gegevens over je aantal berichten, volgers en hoeveel mensen je volgt. -->
+        <section>
+            <ul>
+                <li>
+                    <p>9 berichten</p>
+                </li>
+                <li><a href="#">0 volgers</a></li>
+                <li><a href="">17 volgend</a></li>
+            </ul>
+        </section>
+<!-- Dit is een nav omdat je kunt schakelen tussen verschillende tabbladen zeg maar -->
+        <section>
+            <nav>
+                <ul>
+                    <li><button>berichten</button></li>
+                    <li><button>igtv</button></li>
+                    <li><button>opgeslagen</button></li>
+                    <li><button>getagd</button></li>
+                </ul>
+            </nav>
+        </section>
+<!-- De sectie met alle geuploade posts -->
+        <section>
+            <img src="images/costaricapost.jpeg" alt="Instagram post van jespervoorschool over Costa Rica">
+            <img src="images/oostenrijkpost.jpeg" alt="Instagram post van jespervoorschool over Oostenrijk">
+            <img src="images/texelpost.jpeg" alt="Instagram post van jespervoorschool over Texel">
+            <img src="images/vriendinpost.jpeg" alt="Instagram post van jespervoorschool met zijn vriendin">
+            <img src="images/panamapost.jpeg" alt="Instagram post van jespervoorschool over Panama">
+            <img src="images/partnerschappost.JPG" alt="Instagram post van jespervoorschool over geregistreerd partnerschap">
+            <img src="images/nanoukpost.jpeg" alt="Instagram post van jespervoorschool over zijn hond Nanouk">
+            <img src="images/propedeusepost.jpeg" alt="Instagram post van jespervoorschool over het behalen van zijn propedeuse">
+            <img src="images/puppypost.jpeg" alt="Instagram post van jespervoorschool over het krijgen van een puppy">
+        </section>
+
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="#">Info</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Vacatures</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Voorwaarden</a></li>
+            <li><a href="#">Populaire accounts</a></li>
+            <li><a href="#">Hashtags</a></li>
+            <li><a href="#">Locaties</a></li>
+        </ul>
+        <select name="Weergavetaal">
+            <option value="af">Afrikaans</option>
+            <option value="cs">Čeština</option>
+            <option value="da">Dansk</option>
+            <option value="de">Deutsch</option>
+            <option value="el">Ελληνικά</option>
+            <option value="en">English</option>
+            <option value="es">Español (España)</option>
+            <option value="es-la">Español</option>
+            <option value="fi">Suomi</option>
+            <option value="fr">Français</option>
+            <option value="id">Bahasa Indonesia</option>
+            <option value="it">Italiano</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+            <option value="ms">Bahasa Melayu</option>
+            <option value="nb">Norsk</option>
+            <option selected value="nl">Nederlands</option>
+            <option value="pl">Polski</option>
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="pt">Português (Portugal)</option>
+            <option value="ru">Русский</option>
+            <option value="sv">Svenska</option>
+            <option value="th">ภาษาไทย</option>
+            <option value="tl">Filipino</option>
+            <option value="tr">Türkçe</option>
+            <option value="zh-cn">中文(简体)</option>
+            <option value="zh-tw">中文(台灣)</option>
+            <option value="bn">বাংলা</option>
+            <option value="gu">ગુજરાતી</option>
+            <option value="hi">हिन्दी</option>
+            <option value="hr">Hrvatski</option>
+            <option value="hu">Magyar</option>
+            <option value="kn">ಕನ್ನಡ</option>
+            <option value="ml">മലയാളം</option>
+            <option value="mr">मराठी</option>
+            <option value="ne">नेपाली</option>
+            <option value="pa">ਪੰਜਾਬੀ</option>
+            <option value="si">සිංහල</option>
+            <option value="sk">Slovenčina</option>
+            <option value="ta">தமிழ்</option>
+            <option value="te">తెలుగు</option>
+            <option value="vi">Tiếng Việt</option>
+            <option value="zh-hk">中文(香港)</option>
+            <option value="bg">Български</option>
+            <option value="fr-ca">Français (Canada)</option>
+            <option value="ro">Română</option>
+            <option value="sr">Српски</option>
+            <option value="uk">Українська</option>
+        </select>
+        <p>© 2021 Instagram van Facebook</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
