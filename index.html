@@ -1,422 +1,248 @@
-<!doctype html>
-<html lang="nl">
+
+<!DOCTYPE html>
+
+<html lang="en" xml:lang="nl" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Jesper van der Greft">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Instagram</title>
+    <title>LeHomies Bierpong</title>
+    
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    
+    <meta name="description" content="This simple online tool allows you to quickly create a schedule for your tournament, and keep score online." />
+    
+    <meta property="fb:app_id" content="286342901441562" />
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lehomies.github.io/bierpong/" />
+    <meta property="og:title" content="LeHomies Bierpong" />
+    <meta property="og:description" content="Website waar de bierpong toernooien van LeHomies op staan en de live scores" />
 
-    <link href="styles/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/tbj6yrb.css">
-    <link rel="icon" type="image/png" href="images/logolehomies.png" />
+    <link href="resources/css/styles.css" type="text/css" rel="stylesheet" />
+	<link href="resources/css/jqueryui-blitzer/jquery-ui-1.8.14.custom.css" type="text/css" rel="stylesheet" />
+    <link href="resources/javascript/tiptip/tipTip.css" type="text/css" rel="stylesheet" />
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js" type="text/javascript"></script>
+    
+    <script src="resources/javascript/tiptip/jquery.tipTip.js" type="text/javascript"></script>
+    
+    <script src="resources/javascript/jquery.elastic.js" type="text/javascript"></script>
+    <script src="resources/javascript/jquery.placeholder.js" type="text/javascript"></script>
+    <script src="resources/javascript/scheduler.js" type="text/javascript"></script>
+    
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    
 </head>
 
 <body>
-    <!-- Deze div kan eigenlijk niet anders heb ik met Deanne besproken het zorgt voor de background
-    dat die kan blijven uitbreiden. -->
-    <div>
-        <header>
-            <h1><a href="index.html">instagram logo<img src="images/instagram_logo.png" alt="Het logo vanInstagram"></a>
-            </h1>
-            <input type="text" placeholder="Zoeken">
-            <nav>
-                <ul>
-                    <li><a href="index.html">home <img alt="home icoon" src="images/home.svg" height="22"
-                                viewBox="0 0 48 48" width="21"></a></li>
-                    <li><a href="direct.html">direct <img alt="direct icoon" src="images/direct.svg" height="19"
-                                viewBox="0 0 48 48" width="22"></a></li>
-                    <li><a href="explore.html">explore <img alt="explore icoon" src="images/explore.svg" height="22"
-                                viewBox="0 0 48 48" width="22"></a></li>
-                    <li><a href="activiteitenoverzicht.html">activiteitenoverzicht <img alt="activiteiten icoon"
-                                src="images/hart.svg" height="19" viewBox="0 0 48 48" width="22"></a></li>
-                    <li><a href="profiel.html">profiel <img alt="profiel icoon" src="images/jespervdgreft_.jpg"
-                                height="22" viewBox="0 0 48 48" width="22"></a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
-<!-- elke main heeft een eigen class zodat je de inhoud van elke pagina kunt aanpassen maar de header en de footer hetzelfde kan blijven -->
-    <main class="homepage">
-        <!-- Dit is de section van de verhalen, elk verhaal is een button en een verderknop waarmee je zou kunnen bladeren als die werkt -->
-        <section>
-            <button>verder</button>
+
+    <div id="container">
+
+        <div id="menuWrapper">
+        
+        <div id="menu">
+        
             <ul>
-                <li>
-                    <button>
-                        <img src="images/pathethuis.jpg" alt="verhaal van pathethuis">
-                    </button>
-                    <p>pathethuis</p>
-                </li>
-                <li>
-                    <button>
-                        <img src="images/premiereleaguelogo.png" alt="verhaal van premerie league">
-                    </button>
-                    <p>premierleague</p>
-                </li>
-                <li>
-                    <button>
-                        <img src="images/leomessi.jpg" alt="verhaal van leomessi">
-                    </button>
-                    <p>leomessi</p>
-                </li>
-                <li>
-                    <button>
-                        <img src="images/neymarjr.jpg" alt="verhaal van neymarjr">
-                    </button>
-                    <p>neymarjr</p>
-                </li>
-                <li>
-                    <button>
-                        <img src="images/cristiano.jpg" alt="verhaal van cristiano">
-                    </button>
-                    <p>cristiano</p>
-                </li>
-                <li>
-                    <button>
-                        <img src="images/fcbarcelona.jpg" alt="verhaal van fcbarcelona">
-                    </button>
-                    <p>fcbarcelona</p>
-                </li>
-                <li>
-                    <button>
-                        <img src="images/championsleague.jpg" alt="verhaal van championsleague">
-                    </button>
-                    <p>championsleague</p>
-                </li>
-                <li>
-                    <button>
-                        <img src="images/jespervdgreft_.jpg" alt="verhaal van jespervdgreft_">
-                    </button>
-                    <p>jespervdgreft_</p>
-                </li>
-                <li>
-                    <button>
-                        <img src="images/instagram.jpg" alt="verhaal van instagram">
-                    </button>
-                    <p>instagram</p>
-                </li>
+                <li><a href="https://tournamentscheduler.net">Scheduler</a></li>
+                <li><a href="https://tournamentscheduler.net#instructions">Instructions</a></li>
+                <li><a href="https://tournamentscheduler.net#about">About this site</a></li>
+                <li><a href="https://tournamentscheduler.net#contact">Contact/discuss</a></li>
             </ul>
-        </section>
-<!-- Dit is de section van alle articles dus de posts. Elke article bestaat uit een header met gevens over de
-gebruiker die de post erop zet, daaronder de foto die wordt geupload en daaronder een aantal buttons.
-Als laatste de footer waarin de reacties staan en geplaatst kunnen worden. -->
-        <section>
-            <article>
-                <header>
-                    <a href="#"><button><img alt="premiereleague profiel foto"
-                                src="images/premiereleaguelogo.png"></button></a>
-                    <p>Betaald partnerschap met <a href="#">easportsfifa</a></p>
-                    <h2><a href="#">premierleague</a></h2>
-                    <button>opties</button>
-                </header>
+            
+        </div>
 
-                <img src="images/premiereleaguepost.png" alt="post van premiere league met de nominaties voor de premiere league player of the month november met als
-                genomineerden Chillwell, Fernandes, Grealish, Hojbjerg, Ogbonna, Ward-prowse">
+        
+        
+        </div>
+       
+        
+        <div id="nonmenu">
 
-                <button class="like-button-groot">like</button>
-                <button>reageer</button>
-                <button>direct</button>
-                <button>bookmark</button>
+            <h1 id="siteHeader"><a href="https://tournamentscheduler.net"><span>Tournament Scheduler - Easy to use online schedule maker for round robin tournament schedules</span></a></h1>
+            
+                <div id="mainContent">
+                
 
-                <button>33.705 vind-ik-leuks</button>
+<section>
 
-                <footer>
-                    <h2><a href="#">premierleague</a></h2>
-                    <p>Who is your <a href="#">@easportsfifa</a> Player of the Month for November?</p>
+<p>Welcome! This simple online tool will generate a (double) round robin tournament schedule for you. Optionally, you can also use it to keep score. As far as I'm concerned, this is an unmissable tool in your arsenal if you want to organize round robin tournaments!</p>
 
-                    <details>
-                        <summary>Alle 1.127 opmerkingen bekijken</summary>
-                        <article>
-                            <div>
-                                <h2><a href="#">__davheed</a></h2>
-                                <p>Bruuuuuuno🔥</p>
-                            </div>
-                            <button class="like">reactie like</button>
-                        </article>
-                        <article>
-                            <div>
-                                <h2><a href="#">mufcone</a></h2>
-                                <p>BRUNO 🔴</p>
-                            </div>
-                            <button class="like-button-klein">reactie like</button>
-                        </article>
-                        <article>
-                            <div>
-                                <h2><a href="#">milanknaap</a></h2>
-                                <p>Chilwell for sure</p>
-                            </div>
-                            <button class="like-button-klein">reactie like</button>
-                        </article>
-                        <article>
-                            <div>
-                                <h2><a href="#">dexter1990</a></h2>
-                                <p>Ogbonnnaaa</p>
-                            </div>
-                            <button>reactie like</button>
-                        </article>
-                        <article>
-                            <div>
-                                <h2><a href="#">jaimyberk</a></h2>
-                                <p>Grealish!</p>
-                            </div>
-                            <button>reactie like</button>
-                        </article>
-                        <article>
-                            <div>
-                                <h2><a href="#">matsklop</a></h2>
-                                <p>Italian monster Ogbonna</p>
-                            </div>
-                            <button>reactie like</button>
-                        </article>
-                    </details>
-                    <article>
-                        <div>
-                            <h2><a href="#">__davheed</a></h2>
-                            <p>Bruuuuuuno🔥</p>
-                        </div>
-                        <button>reactie like</button>
-                    </article>
-                    <article>
-                        <div>
-                            <h2><a href="#">mufcone</a></h2>
-                            <p>BRUNO 🔴</p>
-                        </div>
-                        <button>reactie like</button>
-                    </article>
-                </footer>
+<p id="tournament-number-highlight">So far <strong>218,657</strong> schedules have been generated, for a total of <strong>2,063,990</strong> matches!</p>
 
-                <time datetime="2020-12-10T18:00:30.220">15 minuten geleden</time>
+</section>
 
-                <form action="index.html">
-                    <textarea name="opmerking" cols="70" rows="1" placeholder="Een opmerking toevoegen..."></textarea>
-                    <input type="submit" value="Plaatsen">
-                </form>
-            </article>
+<form method="post" action="generate-schedule" id="scheduler">
 
-            <article>
-                <header>
-                    <a href="#"><button><img alt="neymarjr profiel foto" src="images/neymarjr.jpg"></button></a>
-                    <h2><a href="#">neymarjr</a></h2>
-                    <button>opties</button>
-                </header>
+<ol>
 
-                <img src="images/neymarjrpost.jpg"
-                    alt="post van neymarjr waarop te zien is dat hij Lionel Messi een kus geeft om het te feliciteren met zijn ballon d'or">
+	<li><div>
+		<h3><label for="players">1. Enter player (or team) names</label></h3>
+		<textarea id="players" name="players" placeholder="Enter one player/team per line..."></textarea>
+		
+		<p>...or <a href="#" id="generate-num-players">auto-generate</a> &lsquo;Player 1&rsquo;...&lsquo;Player X&rsquo; if you're too lazy to type.</p>
 
-                <button class="like-button-groot">like</button>
-                <button>reageer</button>
-                <button>direct</button>
-                <button>bookmark</button>
+	</div></li>
+	
+	<li><div>
+		<h3>2. Choose tournament type</h3>
+		<div class="field radio">
+			<input type="radio" id="type-single" name="type" value="single" checked="checked" /><label for="type-single">Round robin</label>
+			<input type="radio" id="type-double" name="type" value="double" /><label for="type-double">Double round robin</label>
+		</div>
+	</div></li>
+	
+	<li><div>
+		<h3>3. Schedule locations?</h3>
+		<div class="field radio">
+			<input type="radio" id="locations-yes" name="locations" value="yes" /><label for="locations-yes">Yes</label>
+			<input type="radio" id="locations-no" name="locations" value="no" checked="checked" /><label for="locations-no">No</label>
+		</div>
+		
+		<textarea id="locationsList" name="locationsList" placeholder="Enter one location per line..." style="display: none;"></textarea>
+		
+	</div></li>
+	
+	<li><div>
+		<h3>4. Enter a tournament name</h3>
+		
+		<input type="text" name="tournament-name" id="tournament-name" maxlength="100" />
+		
+	</div></li>
+	
+	<li><div>
+		<h3>5. Enter your e-mail address (optional)</h3>
+		
+		<input type="text" name="email" id="email" />
+		<p>Not required, but <em>highly</em> recommended! <a href="#" id="why-email-link">Why ask for my e-mail address</a>?</p>
+		<p style="display: none;">We will email you a link to your tournament schedule if you fill in this field.
+		If you lose the URL to your schedule, you will not be able to view it again or modify it. Having the URL in your inbox is therefore quite convenient!
+		We will only use your e-mail address for this one-time service and will not store it.</p>
+		
+	</div></li>
+    
+    <li><div>
+        <h3>6. Prove you are human</h3>
+      
+      <div class="g-recaptcha" data-sitekey="6Lfn0eASAAAAAI8dGKeESd87ik6dT2vuM4ieq6n2"></div>
+  
+  </div></li>
+    
+    <li id="advanced-options" class="hidden"><div>
+        <h3>7. Advanced options</h3>
+        
+        <div class="field-wrapper">
+        
+            <label class="question-label tooltip first" title="If you do not enable this option, scheduling will always start by considering who the first team should play against, then the second, etc. If this option is enabled, who counts as the 'first'/'second'/etc. team will be randomized before scheduling begins.">Randomize team order?</label>
+            <div class="field radio">            
+                <input type="radio" id="randomize-teams-yes" name="randomize-teams" value="yes" checked="checked" /><label for="randomize-teams-yes">Yes (default)</label>
+                <input type="radio" id="randomize-teams-no" name="randomize-teams" value="no" /><label for="randomize-teams-no">No</label>
+            </div>
+            
+            <label class="question-label">Randomize round order?</label>
+            <div class="field radio">
+                <input type="radio" id="randomize-rounds-yes" name="randomize-rounds" value="yes" checked="checked" /><label for="randomize-rounds-yes">Yes (default)</label>
+                <input type="radio" id="randomize-rounds-fully" name="randomize-rounds" value="fully" /><label for="randomize-rounds-fully" title="In a double round-robin tournament, the default 'Yes' will still keep all the 'home' matches as the first half of the tournament and the 'away' matches as the second half. Select 'Fully' to fully randomly intermix all matches, regardless of home/away status." class="tooltip">Fully</label>
+                <input type="radio" id="randomize-rounds-no" name="randomize-rounds" value="no" /><label for="randomize-rounds-no">No</label>
+            </div>
+            
+            <label class="question-label">Randomize location assignment (if applicable)?</label>
+            <div class="field radio">
+                <input type="radio" id="randomize-locations-yes" name="randomize-locations" value="yes" checked="checked" /><label for="randomize-locations-yes">Yes (default)</label>
+                <input type="radio" id="randomize-locations-no" name="randomize-locations" value="no" /><label for="randomize-locations-no">No</label>
+            </div>
+        
+        </div>
+        
+    </div></li>
+	
+	<li class="last"><div>
+		<h3><span class="counter">7</span>. Generate schedule</h3>
+		
+		<input type="submit" value="Generate!" id="scheduler-submit" />
+        
+        <p><a href="#" id="advanced-options-toggle">...let me edit advanced options first</a></p>
+		
+	</div></li>
 
-                <button>4.929.098 vind-ik-leuks</button>
+</ol>
 
-                <footer>
-                    <h2><a href="#">neymarjr</a></h2>
-                    <p>Nos vemos em breve meu amigo ❤️😍🥺</p>
+</form>
 
-                    <details>
-                        <summary>Alle 44 opmerkingen bekijken</summary>
-                        <article>
-                            <div>
-                                <h2><a href="#">negodoborel</a></h2>
-                                <p>Kkkk tu é pika moleque, brinca com a brincadeira rs</p>
-                            </div>
-                            <button>reactie like</button>
-                        </article>
-                        <article>
-                            <div>
-                                <h2><a href="#">djsnake</a></h2>
-                                <p>🔴🔵</p>
-                            </div>
-                            <button>reactie like</button>
-                        </article>
-                        <article>
-                            <div>
-                                <h2><a href="#">tgmartins</a></h2>
-                                <p>Que dupla 👏🏻</p>
-                            </div>
-                            <button>reactie like</button>
-                        </article>
-                        <article>
-                            <div>
-                                <h2><a href="#">brunoagnello</a></h2>
-                                <p>Nem brinca com isso! 😍</p>
-                            </div>
-                            <button>reactie like</button>
-                        </article>
-                    </details>
-                    <article>
-                        <div>
-                            <h2><a href="#">negodoborel</a></h2>
-                            <p>Kkkk tu é pika moleque, brinca com a brincadeira rs</p>
-                        </div>
-                        <button>reactie like</button>
-                    </article>
-                    <article>
-                        <div>
-                            <h2><a href="#">djsnake</a></h2>
-                            <p>🔴🔵</p>
-                        </div>
-                        <button>reactie like</button>
-                    </article>
-                </footer>
+<div id="instructions" class="page-section">
 
-                <time datetime="2020-12-10T16:00:30.220">2 uur geleden</time>
+<h2>Instructions</h2>
 
-                <form action="index.html">
-                    <textarea name="opmerking" cols="70" rows="1" placeholder="Een opmerking toevoegen..."></textarea>
-                    <input type="submit" value="Plaatsen">
-                </form>
-            </article>
+<section>
 
-            <article>
-                <header>
-                    <a href="#"><button><img alt="k.mbappe profiel foto" src="images/k.mbappe.jpg"></button></a>
-                    <p>Parc Des Princes</p>
-                    <h2><a href="#">k.mbappe</a></h2>
-                    <button>opties</button>
-                </header>
+<p>Organizing a round robin tournament using this online schedule maker is very simple. Just follow the steps below (the numbers refer to the form fields in the <a href="#scheduler">scheduler form</a> above):</p>
+<ol>
+    <li>Enter the names of the players or teams you want to include in the tournament you're organizing. Use one entry per line in this text box. If you do not feel like entering names by hand, you can also click the 'auto-generate' link and generate numbered players to include in the schedule.</li>
+    <li>Choose whether you want to schedule a single or double round robin tournament league. Single round robin means each team faces each other team once, double round robin means each team faces each other team twice. With double round robin, there will be a 'home' and an 'away' match between each of the teams.</li>
+    <li>If you want to include the locations of the matches in the organization of your schedule, select 'Yes' here. If you choose to schedule locations, you need to specify half as many locations as you have specified players (again, enter one per line). In the case of an odd number of players, round half the number of players down. <em>Note:</em> the scheduling of the locations is not very balanced at the moment; e.g. the first player will always play at the same location. We are working on improving this algorithm.</li>
+    <li>Enter a title for your tournament or league.</li>
+    <li>We highly recommend you specify an e-mail address here. We will email you a link to your tournament schedule if you fill in this field.
+		If you lose the URL to your schedule, you will not be able to view it again or modify it. Having the URL in your inbox is therefore quite convenient!
+		We will only use your e-mail address for this one-time service and will not store it.</li>
+    <li>Prove you are human by completing the reCAPTCHA field.</li>
+    <li>Click the 'Generate!' button, and voil&agrave;! Your tournament schedule is ready.</li>
+</ol>
+<p>After generation of your schedule, you will receive two URLs: one that allows read-only access to your schedule, and one that allows you to edit player (and location) names, and enter score online. Just share either of those URLs with your friends and get the tournament started!</p>
 
-                <img src="images/k.mbappepost.jpg"
-                    alt="post van k.mbappe waarop te zien is dat hij poseert na een doelpunt met zijn broek hoog omhoog en hij heeft blauw haar en lacht">
+<p>Note that it is now also possible to automatically generate a <strong>ranking table</strong> for your league! When you keep score on the online tournament schedule, and all scores are integer numbers (so 0, 1, 2, etc.), you can click the link below the match schedule and a results table will be generated. It will display matches played, wins, draws, losses, score for, score against, and number of points in a nice convenient table.</p>
 
-                <button class="like-button-groot">like</button>
-                <button>reageer</button>
-                <button>direct</button>
-                <button>bookmark</button>
+</section>
 
-                <button>2.804.051 vind-ik-leuks</button>
+</div>
 
-                <footer>
-                    <h2><a href="#">k.mbappe</a></h2>
-                    <p>O.A BUBBLE GUM 🥶🥶🥶</p>
+<section>
 
-                    <details>
-                        <summary>Alle 16.135 opmerkingen bekijken</summary>
-                        <article>
-                            <div>
-                                <h2><a href="#">pembele.t</a></h2>
-                                <p>BLUE FACE BABY 🥶🥶🥶</p>
-                            </div>
-                            <button>reactie like</button>
-                        </article>
-                        <article>
-                            <div>
-                                <h2><a href="#">pablosarabia92</a></h2>
-                                <p>🤣🤣</p>
-                            </div>
-                            <button>reactie like</button>
-                        </article>
-                        <article>
-                            <div>
-                                <h2><a href="#">enigma2jz</a></h2>
-                                <p>Like ya cut G 🔵</p>
-                            </div>
-                            <button>reactie like</button>
-                        </article>
-                        <article>
-                            <div>
-                                <h2><a href="#">jjwatt</a></h2>
-                                <p>🧊 🧊 🧊</p>
-                            </div>
-                            <button>reactie like</button>
-                        </article>
-                    </details>
-                    <article>
-                        <div>
-                            <h2><a href="#">pembele.t</a></h2>
-                            <p>BLUE FACE BABY 🥶🥶🥶</p>
-                        </div>
-                        <button>reactie like</button>
-                    </article>
-                    <article>
-                        <div>
-                            <h2><a href="#">pablosarabia92</a></h2>
-                            <p>🤣🤣</p>
-                        </div>
-                        <button>reactie like</button>
-                    </article>
-                </footer>
+<!--
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'tournamentscheduler'; // required: replace example with your forum shortname
+    //var disqus_developer = 1;
 
-                <time datetime="2020-12-10T15:00:30.220">3 uur geleden</time>
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+-->
+</section>
 
-                <form action="index.html">
-                    <textarea name="opmerking" cols="70" rows="1" placeholder="Een opmerking toevoegen..."></textarea>
-                    <input type="submit" value="Plaatsen">
-                </form>
-            </article>
-        </section>
-    </main>
-<!-- Dit is de footer met verschillende menu items en een select waarin je de taal kan kiezen. -->
-    <footer>
-        <ul>
-            <li><a href="#">Info</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Vacatures</a></li>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">API</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Voorwaarden</a></li>
-            <li><a href="#">Populaire accounts</a></li>
-            <li><a href="#">Hashtags</a></li>
-            <li><a href="#">Locaties</a></li>
-        </ul>
-        <select name="Weergavetaal">
-            <option value="af">Afrikaans</option>
-            <option value="cs">Čeština</option>
-            <option value="da">Dansk</option>
-            <option value="de">Deutsch</option>
-            <option value="el">Ελληνικά</option>
-            <option value="en">English</option>
-            <option value="es">Español (España)</option>
-            <option value="es-la">Español</option>
-            <option value="fi">Suomi</option>
-            <option value="fr">Français</option>
-            <option value="id">Bahasa Indonesia</option>
-            <option value="it">Italiano</option>
-            <option value="ja">日本語</option>
-            <option value="ko">한국어</option>
-            <option value="ms">Bahasa Melayu</option>
-            <option value="nb">Norsk</option>
-            <option selected value="nl">Nederlands</option>
-            <option value="pl">Polski</option>
-            <option value="pt-br">Português (Brasil)</option>
-            <option value="pt">Português (Portugal)</option>
-            <option value="ru">Русский</option>
-            <option value="sv">Svenska</option>
-            <option value="th">ภาษาไทย</option>
-            <option value="tl">Filipino</option>
-            <option value="tr">Türkçe</option>
-            <option value="zh-cn">中文(简体)</option>
-            <option value="zh-tw">中文(台灣)</option>
-            <option value="bn">বাংলা</option>
-            <option value="gu">ગુજરાતી</option>
-            <option value="hi">हिन्दी</option>
-            <option value="hr">Hrvatski</option>
-            <option value="hu">Magyar</option>
-            <option value="kn">ಕನ್ನಡ</option>
-            <option value="ml">മലയാളം</option>
-            <option value="mr">मराठी</option>
-            <option value="ne">नेपाली</option>
-            <option value="pa">ਪੰਜਾਬੀ</option>
-            <option value="si">සිංහල</option>
-            <option value="sk">Slovenčina</option>
-            <option value="ta">தமிழ்</option>
-            <option value="te">తెలుగు</option>
-            <option value="vi">Tiếng Việt</option>
-            <option value="zh-hk">中文(香港)</option>
-            <option value="bg">Български</option>
-            <option value="fr-ca">Français (Canada)</option>
-            <option value="ro">Română</option>
-            <option value="sr">Српски</option>
-            <option value="uk">Українська</option>
-        </select>
-        <p>© 2021 Instagram van Facebook</p>
-    </footer>
+</div>
 
-    <script src="scripts/script.js"></script>
+            <br class="clear" />        
+        </div> <!-- end of maincontent -->
+        </div> <!-- end of nonmenu -->
+        <br class="clear" />
+        
+        <div id="footer-wrapper">
+            <div id="footer">
+                <ul>
+                    <li><a href="https://tournamentscheduler.net">Scheduler</a></li>
+                    <li><a href="https://tournamentscheduler.net#instructions">Instructions</a></li>
+                    <li><a href="https://tournamentscheduler.net#about">About this site</a></li>
+                    <li><a href="https://tournamentscheduler.net#contact">Contact/discuss</a></li>
+                </ul>
+                
+                <br class="clear" />
+                
+                <p>All materials on this website &copy; 2012-2021 Tournamentscheduler.net, the online schedule maker for sports and other tournaments.</p>
+            </div>
+        </div>
+        
+    </div> <!-- end of container -->
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7507393669055870"
+     crossorigin="anonymous"></script>
+     
 </body>
 
 </html>
